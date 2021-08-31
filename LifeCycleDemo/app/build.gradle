@@ -36,4 +36,6 @@ dependencies {
     //引入lifecycle
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
+    //引入LifecycleService 包冲突，待解决
+    implementation "android.arch.lifecycle:extensions:1.1.1"
 }
