@@ -1,0 +1,41 @@
+/**
+ * 全局统一配置
+ */
+ext {
+    /**
+     * module开关统一声明在此处
+     * true：module作为application，可单独打包为apk
+     * false：module作为library，可作为宿主的依赖库
+     *
+     * module是否组件化开发 true-单独运行 false-lib运行
+     */
+    isModule_0_observer = false
+
+
+    /**
+     * 版本统一管理
+     */
+    versions = [
+            buildToolsVersion : "30.0.3",
+
+            applicationId_Main: "com.sun.androidjetpack",
+            applicationId_module0   : "com.sun.observer",
+            versionCode       : 100,
+            versionName       : "1.0.0",
+
+            compileSdkVersion : 30,
+            minSdkVersion     : 21,
+            targetSdkVersion  : 30,
+
+            multidexVersion   : "2.0.0",
+    ]
+
+    //特意区别dependencies,免得关键字干扰
+    dependencyss = [
+            //方法数超过65535解决方法64K MultiDex分包方法
+            "multidex": "androidx.multidex:multidex:2.0.0",
+            "arouterapi"     : "com.alibaba:arouter-api:1.5.2",
+            "aroutercompiler": "com.alibaba:arouter-compiler:1.5.2",
+    ]
+
+}

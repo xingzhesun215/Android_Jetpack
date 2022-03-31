@@ -1,0 +1,67 @@
+apply from: "../config.gradle"
+
+if (isModule_0_observer.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+android {
+    compileSdkVersion versions["compileSdkVersion"]
+    buildToolsVersion versions["buildToolsVersion"]
+
+    defaultConfig {
+        if (isModule_0_observer.toBoolean()) {
+            applicationId versions["applicationId_module0"]
+        }
+
+        minSdkVersion versions["minSdkVersion"]
+        targetSdkVersion versions["targetSdkVersion"]
+        versionCode versions["versionCode"]
+        versionName versions["versionName"]
+
+
+        //Arouter路由使用
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+    }
+    sourceSets {
+        main {
+            if (isModule_0_observer.toBoolean()) {//此时为组件开发,各开发各的
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {//此时为集成开发,合 将debug目录下分开
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    exclude 'debug/**'
+                }
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation project(path: ':common_library')
+    annotationProcessor dependencyss["aroutercompiler"]
+}

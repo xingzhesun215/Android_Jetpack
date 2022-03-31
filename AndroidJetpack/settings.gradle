@@ -1,0 +1,4 @@
+include ':common_library'
+include ':module_0_observer'
+include ':app'
+rootProject.name = "AndroidJetpack"
