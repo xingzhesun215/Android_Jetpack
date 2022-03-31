@@ -1,4 +1,4 @@
-package com.sun.module_0_observer.debug;
+package com.sun.module_0_observer.module;
 
 import com.sun.common_library.base.BaseApplication;
 
