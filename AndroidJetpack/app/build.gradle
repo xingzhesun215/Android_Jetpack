@@ -22,6 +22,7 @@ android {
             }
         }
         buildConfigField("boolean", "isModule_0_observer", String.valueOf(isModule_0_observer))
+        buildConfigField("boolean", "isModule_1_lifecycle", String.valueOf(isModule_1_lifecycle))
     }
 
     buildTypes {
@@ -49,6 +50,9 @@ dependencies {
     implementation project(path: ':common_library')
     if (!isModule_0_observer.toBoolean()) {
         implementation project(path: ':module_0_observer')
+    }
+    if (!isModule_1_lifecycle.toBoolean()) {
+        implementation project(path: ':module_1_lifecycle')
     }
 
     annotationProcessor dependencyss["aroutercompiler"]

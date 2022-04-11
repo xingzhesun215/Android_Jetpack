@@ -68,7 +68,7 @@ public abstract class BaseActivity extends ComponentActivity {
     }
 
     @Override
-    protected void onDestroy() {
+    public void onDestroy() {
         super.onDestroy();
     }
 

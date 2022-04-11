@@ -1,8 +1,8 @@
 package com.sun.module_0_observer;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;

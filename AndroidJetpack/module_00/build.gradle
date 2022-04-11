@@ -36,7 +36,7 @@ android {
             } else {//此时为集成开发,合 将debug目录下分开
                 manifest.srcFile 'src/main/AndroidManifest.xml'
                 java {
-                    exclude 'debug/**'
+                    exclude 'module/**'
                 }
             }
         }

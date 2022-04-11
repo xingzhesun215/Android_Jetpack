@@ -5,10 +5,12 @@ package com.sun.module_0_observer;
  */
 public interface Police {
 
-    public BadMan badMan=null;
-    public void catchBadMan(int count);
+    void catchBadMan(int count);
 
-    public interface Horn{
-        public void speak(String message);
+    /**
+     * 大喇叭,用来回调信息给activity
+     */
+    interface Horn {
+        void speak(String message);
     }
 }
