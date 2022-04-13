@@ -12,9 +12,12 @@ public class ArouterPath {
     //module_1_lifecycle
     public static final String Module_1_lifecycle_MainActivity = "/module_1_lifecycle/MainActivity";
 
-    //module_2_lifedata
+    //module_2_viewmodel
     public static final String Module_2_viewmodel_MainActivity = "/module_2_livedata/MainActivity";
 
-    //module_2_lifedata
-    public static final String Module_3_livedata_MainActivity = "/module_2_livedata/MainActivity";
+    //module_3_lifedata
+    public static final String Module_3_livedata_MainActivity = "/module_3_livedata/MainActivity";
+
+    //module_4_navigation
+    public static final String Module_4_navigation_MainActivity = "/module_4_navigation/MainActivity";
 }

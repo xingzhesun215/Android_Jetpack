@@ -3,5 +3,6 @@ include ':module_0_observer'
 include ':module_1_lifecycle'
 include ':module_2_viewmodel'
 include ':module_3_livedata'
+include ':module_4_navigation'
 include ':app'
 rootProject.name = "AndroidJetpack"

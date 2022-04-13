@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/module_1_lifecycle" />
             <option value="$PROJECT_DIR$/module_2_viewmodel" />
             <option value="$PROJECT_DIR$/module_3_livedata" />
+            <option value="$PROJECT_DIR$/module_4_navigation" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

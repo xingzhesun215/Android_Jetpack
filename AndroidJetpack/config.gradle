@@ -13,6 +13,7 @@ ext {
     isModule_1_lifecycle = true
     isModule_2_viewmodel = true
     isModule_3_livedata = true
+    isModule_4_navigation = true
 
 
     /**
@@ -26,6 +27,7 @@ ext {
             applicationId_module1: "com.sun.lifecycle",
             applicationId_module2: "com.sun.viewmodel",
             applicationId_module3: "com.sun.livedata",
+            applicationId_module4: "com.sun.navigation",
             versionCode          : 100,
             versionName          : "1.0.0",
 
