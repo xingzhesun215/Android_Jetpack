@@ -7,12 +7,13 @@ import android.view.Window;
 
 import androidx.activity.ComponentActivity;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.sun.common_library.util.KeyboardUtil;
 
 
-public abstract class BaseActivity extends ComponentActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
