@@ -14,6 +14,7 @@ ext {
     isModule_2_viewmodel = true
     isModule_3_livedata = true
     isModule_4_navigation = true
+    isModule_5_viewbinding = true
 
 
     /**
@@ -28,6 +29,7 @@ ext {
             applicationId_module2: "com.sun.viewmodel",
             applicationId_module3: "com.sun.livedata",
             applicationId_module4: "com.sun.navigation",
+            applicationId_module4: "com.sun.viewbinding",
             versionCode          : 100,
             versionName          : "1.0.0",
 

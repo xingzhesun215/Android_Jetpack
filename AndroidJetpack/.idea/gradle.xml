@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/module_2_viewmodel" />
             <option value="$PROJECT_DIR$/module_3_livedata" />
             <option value="$PROJECT_DIR$/module_4_navigation" />
+            <option value="$PROJECT_DIR$/module_5_viewbinding" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

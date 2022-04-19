@@ -20,4 +20,7 @@ public class ArouterPath {
 
     //module_4_navigation
     public static final String Module_4_navigation_MainActivity = "/module_4_navigation/MainActivity";
+
+    //module_5_viewbinding
+    public static final String Module_5_viewbinding_MainActivity = "/module_5_viewbinding/MainActivity";
 }
