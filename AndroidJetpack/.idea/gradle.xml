@@ -20,6 +20,7 @@
             <option value="$PROJECT_DIR$/module_3_livedata" />
             <option value="$PROJECT_DIR$/module_4_navigation" />
             <option value="$PROJECT_DIR$/module_5_viewbinding" />
+            <option value="$PROJECT_DIR$/module_6_databinding" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="student"
+            type="com.sun.databinding.Student" />
+
+        <variable
+            name="student_observable"
+            type="com.sun.databinding.StudentObservable" />
+
+        <variable
+            name="studentfield"
+            type="com.sun.databinding.StudentObservableField" />
+
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="age"
+            type="int" />
+
+        <import type="com.sun.databinding.StaticMethod" />
+
+        <variable
+            name="eventClick"
+            type="com.sun.databinding.MainActivity.EventClick" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World,I am databinding !" />
+
+        <TextView
+            android:id="@+id/tv_student_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{student.toString()}" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{name}" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(age)}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{StaticMethod.getName()}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{StaticMethod.getName(age)}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{eventClick::clickToast}"
+            android:text="按钮点击" />
+
+        <include
+            layout="@layout/layout_common"
+            app:studentinfo="@{student}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{name}" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入框1"
+            android:text="@={student_observable.name}" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入框2"
+            android:text="@={student_observable.name}" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入框1"
+            android:text="@={studentfield.name}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入框2"
+            android:text="@={studentfield.name}" />
+
+    </LinearLayout>
+</layout>
